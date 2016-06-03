@@ -15,3 +15,15 @@ Quick start
 1. `mvn package`
 2. `java -jar target/example-spring-boot-mvc-1.0-SNAPSHOT.war`
 3. Point your browser to [http://localhost:8080/user_list.html](http://localhost:8080/user_list.html)
+
+Testing performace
+-------------------
+
+The application heapSize is limited to 50m and the RAM on docker container to 150m
+
+	$ docker-compose up
+	$ siege -v -c5 -t30s http://openjdk7.mageddo:9595/user_list.html
+	
+
+
+
