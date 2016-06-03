@@ -1,0 +1,9 @@
+springmvc:
+  image: mattgruter/openjdk:7
+  hostname: "openjdk7.mageddo"
+  volumes:
+    - $PWD/target:/opt/spring
+  working_dir: /opt/spring
+  command: java -Xmx100m -jar example-spring-boot-mvc-1.0-SNAPSHOT.war
+  mem_limit: 120m
+  memswap_limit: 0

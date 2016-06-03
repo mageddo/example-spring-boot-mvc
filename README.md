@@ -25,5 +25,7 @@ The application heapSize is limited to 50m and the RAM on docker container to 15
 	$ siege -v -c5 -t30s http://openjdk7.mageddo:9595/user_list.html
 	
 
+get docker container ram usage
 
+	docker stats docker-container
 

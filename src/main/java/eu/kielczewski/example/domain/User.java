@@ -2,24 +2,19 @@ package eu.kielczewski.example.domain;
 
 import com.google.common.base.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Entity
+
 public class User {
 
-    @Id
+
     @NotNull
-    @Size(max = 64)
-    @Column(name = "id", nullable = false, updatable = false)
+    @Size(max = 11)
     private String id;
 
     @NotNull
     @Size(max = 64)
-    @Column(name = "password", nullable = false)
     private String password;
 
     private User() {
@@ -41,8 +36,8 @@ public class User {
     @Override
     public String toString() {
         return Objects.toStringHelper(this)
-                .add("id", id)
-                .add("password", password)
-                .toString();
+          .add("id", id)
+          .add("password", password)
+          .toString();
     }
 }
