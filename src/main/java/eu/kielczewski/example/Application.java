@@ -1,6 +1,5 @@
 package eu.kielczewski.example;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -36,15 +35,17 @@ public class Application extends SpringBootServletInitializer {
         return new JdbcTemplate(dataSource);
     }
 
-    @Bean
-    public DataSource dataSource()
-    {
-        MysqlDataSource dataSource = new MysqlDataSource();
-//        dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
-        dataSource.setUrl(env.getProperty("jdbc.url"));
-        dataSource.setUser(env.getProperty("jdbc.username"));
-        dataSource.setPassword(env.getProperty("jdbc.password"));
-        return dataSource;
-    }
+//    @Bean
+//    public DataSource dataSource()
+//    {
+//        final DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setDriverClassName();
+//        MysqlDataSource dataSource = new MysqlDataSource();
+////        dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+//        dataSource.setUrl(env.getProperty("jdbc.url"));
+//        dataSource.setUser(env.getProperty("jdbc.username"));
+//        dataSource.setPassword(env.getProperty("jdbc.password"));
+//        return dataSource;
+//    }
 
 }
