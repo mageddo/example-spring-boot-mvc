@@ -1,6 +1,7 @@
 springmvc:
-  image: mattgruter/openjdk:7
-  hostname: "openjdk7.mageddo"
+  image: java:openjdk-8u91
+  container_name: example-spring-boot-mvc
+  hostname: "example-spring-boot-mvc.mageddo"
   volumes:
     - $PWD/target:/opt/spring
   working_dir: /opt/spring
